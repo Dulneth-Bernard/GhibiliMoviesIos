@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+protocol NetworkService:Sendable{
+    func fetchFilms() async throws -> [Film]
+    func fetchPerson(url:String) async throws -> Person
+}
+
+//API STATES: idle>loading>loaded then sucess / error

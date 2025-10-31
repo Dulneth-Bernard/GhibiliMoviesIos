@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Equatbel protocol helps us in the seachign for comparison
 struct Person: Identifiable, Decodable, Equatable {
     let id: String
     let name: String
@@ -23,3 +24,4 @@ struct Person: Identifiable, Decodable, Equatable {
         case eyeColor = "eye_color"
         case hairColor = "hair_color"
     }
+}
