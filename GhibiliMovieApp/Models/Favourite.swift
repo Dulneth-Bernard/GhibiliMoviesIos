@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import SwiftData
+
+@Model
+final class Favourite{
+    @Attribute(.unique) var filmId: String
+    init(filmId: String ){
+        self.filmId = filmId
+    }
+}

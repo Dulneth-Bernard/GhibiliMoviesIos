@@ -11,6 +11,11 @@ import Observation
 
 @Observable
 class FilmsViewModel{
+    var errorMSg : String?
+    var films : [Film]?
+    var isLoading: Bool = false
+    var person: Person
+     
     //View modesl keep track of the states
     var state : LoadingState<[Film]> = .idle
     
@@ -22,6 +27,7 @@ class FilmsViewModel{
     }
     
     func fetch() async  {
+        //evrytime we ladn on screen fetch func is called
         guard !state.isLoading || state.error != nil else { return }
         
         state = .loading
