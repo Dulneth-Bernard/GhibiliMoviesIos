@@ -14,7 +14,7 @@ import SwiftData
 ///TODO: Just pass film ID
 //SAVE FUNCTION is overkill, 2 function for favoriting and unfavouriting markAsFav markAsUnfav
 
-struct DefaultFavouriteStorage{
+struct DefaultFavouriteStorage : FavouriteStorage{
     //PERSISTING DATA
     let modelContext: ModelContext
     

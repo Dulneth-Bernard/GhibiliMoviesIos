@@ -10,7 +10,7 @@ import Foundation
 
 //ging to make it lossley couple so wehne we gerneraete another serice struct
 //sendable is for race conditions (Concurrency)
-struct DefaultNetworkingService {
+struct DefaultNetworkingService: NetworkService {
     func fetch<T: Decodable>(urlString: String, type: T.Type) async throws -> T {
         //errors arent going to be handledw within fetch function but happens on usage
         guard let url = URL(string: urlString) else {

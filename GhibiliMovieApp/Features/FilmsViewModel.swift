@@ -14,15 +14,13 @@ class FilmsViewModel{
     var errorMSg : String?
     var films : [Film]?
     var isLoading: Bool = false
-    var person: Person
      
     //View modesl keep track of the states
     var state : LoadingState<[Film]> = .idle
     
     private let networkService : NetworkService
     
-    init(networkService: NetworkService = DefaultNetworkingService() as! NetworkService) {
-        
+    init(networkService: NetworkService = DefaultNetworkingService()) {
         self.networkService = networkService
     }
     
@@ -42,7 +40,5 @@ class FilmsViewModel{
         }
         
     }
-    
-    
     
 }
