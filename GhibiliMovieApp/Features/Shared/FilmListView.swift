@@ -29,7 +29,6 @@ struct FilmListView: View {
 
 // This is the helper struct for the row
 
-
 private struct FilmRow: View {
     let film: Film
     let favoritesViewModel: FavoritesViewModel
